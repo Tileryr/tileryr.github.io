@@ -51,6 +51,10 @@ function load(){
 	if (typeof savegame.SBA !== "undefined") SBA = savegame.SBA;
 	if (typeof savegame.shivs !== "undefined") shivs = savegame.shivs;
 	if (typeof savegame.valentinos !== "undefined") valentinos = savegame.valentinos;
+	document.getElementById("pencils").innerHTML = pencils;
+	document.getElementById("SBA").innerHTML = SBA;
+	document.getElementById("shivs").innerHTML = shivs;
+	document.getElementById("valentinos").innerHTML = valentinos;
 }
 
 function save(){
