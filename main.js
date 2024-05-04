@@ -1,9 +1,12 @@
 var pencils = 0;
+var SBA = 0;
+
 var shivs =  0;
 var valentinos = 0;
 
 var shivStartingCost = 100;
 var valentinoStartingCost = 300;
+
 function pencilClick(number){
     pencils = pencils + number
     document.getElementById("pencils").innerHTML = pencils;
@@ -33,7 +36,39 @@ function buyValentino(){
 	document.getElementById("valentinoCost").innerHTML = nextCost;
 }
 
+function convertPencils(){
+	if(pencils >= 1){
+		SBA = SBA + 1
+		pencils = pencils - 1
+		document.getElementById("SBA").innerHTML = SBA;
+		document.getElementById("pencils").innerHTML = pencils;
+	}
+}
+
+function load(){
+	var savegame = JSON.parse(localStorage.getItem("save"));
+	if (typeof savegame.pencils !== "undefined") pencils = savegame.pencils;
+	if (typeof savegame.SBA !== "undefined") SBA = savegame.SBA;
+	if (typeof savegame.shivs !== "undefined") shivs = savegame.shivs;
+	if (typeof savegame.valentinos !== "undefined") valentinos = savegame.valentinos;
+}
+
+function save(){
+	var save = {
+		pencils: pencils,
+		SBA: SBA,
+		shivs: shivs,
+		valentinos: valentinos,
+	}
+	localStorage.setItem("save",JSON.stringify(save));
+}
+
+function deleteSave(){
+	localStorage.removeItem("save")
+}
+
 window.setInterval(function(){
 	pencilClick(shivs * 5);
 	pencilClick(valentinos * 15);
+	save()
 }, 1000);
