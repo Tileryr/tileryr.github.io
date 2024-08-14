@@ -7,6 +7,8 @@ var valentinos = 0;
 var shivStartingCost = 100;
 var valentinoStartingCost = 300;
 
+var answer = prompt("What is 1 + 2?");
+
 function pencilClick(number){
     pencils = pencils + number
     document.getElementById("pencils").innerHTML = pencils;
@@ -76,3 +78,14 @@ window.setInterval(function(){
 	pencilClick(valentinos * 15);
 	save()
 }, 1000);
+
+function check(){
+	alert("WHATTTT")
+	var answer document.getElementById("answer").value;
+	if (answer === "12") {
+		alert("YAYYYYY");
+	} else {
+		alert("damn");
+	}
+
+}

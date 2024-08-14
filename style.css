@@ -1,0 +1,16 @@
+button{
+	color: indianred;
+	padding: 10px;
+	font-family: cursive;
+	background-color: black;
+}
+
+body{
+	padding-top: 10%;
+	text-align: center;
+	background-color: slategray;
+}
+
+.cost{
+	color: yellow;
+}

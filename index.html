@@ -9,10 +9,11 @@
 			gtag('js', new Date());
 
 			gtag('config', 'G-28N3781Y3E');
+
 		</script>
 		<!-- End -->
 		
-		<link rel="stylesheet" type="text/css" href="interface.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
 		<title>School Pencil Company Idle</title>
 	</head>
 	<body onload="load()">
@@ -34,7 +35,7 @@
 			Recruit a Shiv
 		</button>
 		<span>Shivs: <span id="shivs">0</span></span>
-		<span>Cost: <span id="shivCost">100</span></span>
+		<span>Cost: <span class = "cost" id="shivCost">100</span></span>
 
 		<br><br>
 
@@ -42,7 +43,7 @@
 		Recruit a Valentino
 		</button>
 		<span>Valentinos: <span id="valentinos">0</span></span>
-		<span>Cost: <span id="valentinoCost">300</span></span>
+		<span>Cost: <span class = "cost" id="valentinoCost">300</span></span>
 
 		<br><br>
 
@@ -57,6 +58,12 @@
 		Delete Save?
 		</button>
 		
-		<script type="text/javascript" src="main.js"></script>
+		<form>
+			Answer:
+			<input type="text" name="mathanswer" id = "answer"><br>
+			<input type="submit" value="Submit" onclick="check()">
+		</form>
+
+		<script src="main.js"></script>
 	</body>
 </html>
